@@ -1,0 +1,65 @@
+****************************************************
+Student name		Travis Pootoolal
+Student ID		0753981
+Assignment Number	Assignment 2
+Date			July 4/2014
+****************************************************
+
+
+************
+Compilation
+************
+- Type 'make' into the command line
+- This compiles two files in the bin subdirectory:
+ > phoneBook (menu driven program)
+ > test (hash table testing program)
+
+
+***********************
+Running the program(s)
+***********************
+- For the testing program type bin/test in the root of the folder
+- For the assignment program type bin/phoneBook xxxx.txt in the root of the folder
+ > xxx.txt is the name of the input file, the program will not run without an entry
+
+
+*****************
+Known Limitations
+*****************
+- In some input files, the sorting algorithm runs into errors
+ > This is a result of one or more entries being sorted improperly
+ > This causes the program to freeze upon choosing the print directory function
+ > This causes the program to freeze upon searching the number that caused the error, however searching other numbers should be fine
+
+- The program may freeze if an entry is added that causes the sorting algorithm to run into errors
+ > This causes the program to freeze upon choosing the print directory function
+ > This causes the program to freeze upon searching the number added that caused the error, however searching other numbers should be fine
+ > If a number is added that does not cause the sorting algorithm to run into errors the program should run fine
+
+- The print directory function will only print to the bottom of the window
+ > This may be a result of using ncurses
+ > If there are more entries in the directory than can fit on the screen, only the ones that will fit will be printed
+ > This should have no impact on searching the numbers
+
+
+
+
+
+
+*******************************
+Academic Integrity Pledge
+*******************************
+
+I have exclusive control over this submission via my password.
+By including this file with my submitted files, I certify that:
+
+1) I have read and understood the University policy on academic integrity;
+2) I have completed the Computing with Integrity Tutorial on Moodle; and
+3) I have achieved at least 80% in the Computing with Integrity Self Test.
+
+I assert that this work is my own.
+
+I have appropriately acknowledged any and all material (data, images, ideas or
+words) that I have used, whether directly quoted or paraphrased.  Furthermore,
+I certify that this assignment was prepared by me specifically for this course.
+

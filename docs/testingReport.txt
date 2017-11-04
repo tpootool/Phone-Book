@@ -1,0 +1,49 @@
+Student Name: Travis Pootoolal
+Student ID: 0753981
+
+Testing and design document for Assignment 2
+
+DESIGN:
+
+- This hash table was designed to fix collisions with a linked list strategy.
+ > If there is a collision, the item being inserted will be placed in a linked list in that table position.
+ > The item goes through a sorting algorithm to determine its location in the linked list.
+ > This method was chosen because the amount of entries in the input file can be any number greater than (or equal to) 20, since the 
+   absolute size is uncertain this method guarentees enough space since it is a dynamic approach.
+
+- The hash function utilizes truncation and division to create a key.
+ > The first two characters of the phone number are taken and converted to a single int.
+ > The modulus function is performed on the int to determine its place in the hash table.
+ > This was intended to have a hash table of size 10 (performing int % 10), however this caused errors.
+ > These errors were not present when the size of the hash table was 100 (with int % 100).
+ > The reasoning behind this is unclear, but this size was ultimately chosen for functionality.
+
+
+TESTING:
+
+-Tried making a hash table with 10 slots (less than 2/3 of the minimum size).
+ > Resulted in program freezing.
+ > Problem was avoided when larger table values were used.
+ > Program runs a hash table with 100 slots.
+
+-Tried creating a text file with a large number of entries.
+ > With ncurses, the printing of the list cuts off at the bottom of the window.
+ > Not all entries may get printed as a result of this.
+ > If the individual entries are searched they will be found.
+
+- With some files, there were errors printing and searching when items.
+ > When there are files that cause these errors, the program will freeze when printing or searching.
+ > This may be a result from sorting, however the cause of this was not determined completely.
+
+- For adding individual entries
+ > Tried adding an entry with proper data and was successful
+ > Tried adding an entry with an incorrect number of digits for the phone number, user is prompted with an error message and returns to 
+   the menu.
+
+- For searching entries
+ > Tried searching for a number with less than 10 digits, user is prompted with an error message and returns to the menu.
+ > Tried searching for a number not in the directory, user is prompted with an error message and returns to the menu.
+ > Tried searching for a number that is longer than 10 digits, user is prompted with an error message and returns to the menu.
+
+- Tried pressing various buttons at the main menu
+ > All keys other than the UP and DOWN arrows will select the current option.
